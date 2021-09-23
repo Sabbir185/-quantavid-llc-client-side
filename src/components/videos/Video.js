@@ -24,13 +24,12 @@ const Video = () => {
             if(res.data) {
                 alert('Successful..')
             }
-           
-
         } catch (error) {
             alert('Failed to update! try again..')
         }
-        
     }
+
+    
     return (
         <div>
             <form onSubmit={onSubmit}>

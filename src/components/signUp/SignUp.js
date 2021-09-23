@@ -7,6 +7,7 @@ import './SignUp.css'
 const SignUp = () => {
     const history = useHistory();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+
     // handle user sign up
     const handleUserSignUp = async (event) => {
         event.preventDefault();
@@ -28,7 +29,6 @@ const SignUp = () => {
                 history.push('/')
             }
         })
-        console.log(data)
     }
 
 

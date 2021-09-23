@@ -42,7 +42,6 @@ const Login = () => {
 
             </form>
 
-            
             <small className="mt-3 d-inline-block">Don't have an account ? please <Link to='/sign-up' className="text-decoration-none fw-bold">sign up</Link></small>
         </div>
     );

@@ -76,7 +76,6 @@ const FileContainer = () => {
                         <Tab label="Videos" {...a11yProps(2)} />               
                 </Tabs>
             </AppBar>
-            {/* className="bg-light" */}
             <TabPanel value={value} index={0}>
                 <Image />
             </TabPanel>

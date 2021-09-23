@@ -17,7 +17,6 @@ const VideoView = () => {
         }
     },[])
 
-    console.log(video)
 
     return (
         <div className="mt-5 display-control">
