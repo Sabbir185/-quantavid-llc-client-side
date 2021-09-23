@@ -1,16 +1,12 @@
 import './Home.css';
 import defaultImage from '../stataticFiles/avat.png'
-// import jwt_decode from 'jwt-decode'
 import FileContainer from './fileContainer/FileContainer';
-
+import { useContext } from 'react';
+import { UserContext } from '../App';
 
 
 function Home() {
-//   const {
-//       name, email
-//   } = jwt_decode(JSON.parse(localStorage.getItem('jwt')));
-const name='sabbir';
-const email='sabbir@gmail.com';
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
 
   return (
@@ -20,8 +16,8 @@ const email='sabbir@gmail.com';
                     <img src={defaultImage} alt="" className="img-fluid user-img"/>
                 </div>
                 <div className="col user-info">
-                    <h6 className="textColor1 fw-bold">{name? name: ''}</h6>
-                    <h6 className="textColor2 fw-bold">{email? email : ''}</h6>
+                    <h6 className="textColor1 fw-bold">{loggedInUser.user.name}</h6>
+                    <h6 className="textColor2 fw-bold">{loggedInUser.user.email}</h6>
                 </div>
             </section>
 

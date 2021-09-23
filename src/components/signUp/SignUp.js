@@ -1,16 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { UserContext } from '../../App';
+import { setToken } from '../../lib/auth';
 import './SignUp.css'
 
 const SignUp = () => {
+    const history = useHistory();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     // handle user sign up
-    const handleUserSignUp = (event) => {
+    const handleUserSignUp = async (event) => {
         event.preventDefault();
         const data = {
             name: event.target[0].value,
             email: event.target[1].value,
             password: event.target[2].value,
         }
+        await fetch(`http://localhost:8080/api/user`, {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(data => {
+            setToken(data.token)
+            setLoggedInUser(data)
+            if(data.token){
+                history.push('/')
+            }
+        })
         console.log(data)
     }
 
