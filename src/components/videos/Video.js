@@ -18,7 +18,7 @@ const Video = () => {
             const formData = new FormData();
             formData.append('video', videoData);
 
-            const res = await axios.post(`http://localhost:8080/api/video`, formData, {
+            const res = await axios.post(`https://guarded-waters-35638.herokuapp.com/api/video`, formData, {
                 headers: {'Authorization': `Bearer ${loggedInUser.token}`} });
 
             if(res.data) {

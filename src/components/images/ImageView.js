@@ -8,7 +8,7 @@ const ImageView = () => {
     useEffect(() => {
         try {
             async function fetchData(){
-                const res = await axios.get('http://localhost:8080/api/image');
+                const res = await axios.get('https://guarded-waters-35638.herokuapp.com/api/image');
                 setImage(res.data.data)
             }
             fetchData()

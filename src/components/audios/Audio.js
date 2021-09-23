@@ -18,7 +18,7 @@ const Audio = () => {
             const formData = new FormData();
             formData.append('audio', audioData);
 
-            const res = await axios.post(`http://localhost:8080/api/audio`, formData, {
+            const res = await axios.post(`https://guarded-waters-35638.herokuapp.com/api/audio`, formData, {
                 headers: {'Authorization': `Bearer ${loggedInUser.token}`} });
 
             if(res.data) {

@@ -8,7 +8,7 @@ const AudioView = () => {
     useEffect(() => {
         try {
             async function fetchData(){
-                const res = await axios.get('http://localhost:8080/api/audio');
+                const res = await axios.get('https://guarded-waters-35638.herokuapp.com/api/audio');
                 setAudio(res.data.data)
             }
             fetchData()

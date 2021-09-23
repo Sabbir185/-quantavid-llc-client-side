@@ -18,7 +18,7 @@ const Image = () => {
             const formData = new FormData();
             formData.append('image', imageData);
 
-            const res = await axios.post(`http://localhost:8080/api/image`, formData, {
+            const res = await axios.post(`https://guarded-waters-35638.herokuapp.com/api/image`, formData, {
                 headers: {'Authorization': `Bearer ${loggedInUser.token}`} });
 
             if(res.data) {

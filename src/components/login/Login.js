@@ -15,7 +15,7 @@ const Login = () => {
             email: event.target[0].value,
             password: event.target[1].value,
         }
-        await fetch(`http://localhost:8080/api/user/login`, {
+        await fetch(`https://guarded-waters-35638.herokuapp.com/api/user/login`, {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)

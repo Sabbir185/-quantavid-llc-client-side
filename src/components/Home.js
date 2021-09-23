@@ -23,7 +23,7 @@ function Home() {
             const formData = new FormData();
             formData.append('avatar', imageData);
 
-            const res = await axios.patch(`http://localhost:8080/api/user/update/${loggedInUser.user.id}`, formData, {
+            const res = await axios.patch(`https://guarded-waters-35638.herokuapp.com/api/user/update/${loggedInUser.user.id}`, formData, {
                 headers: {'Authorization': `Bearer ${loggedInUser.token}`}});
 
             if(res.data) {
@@ -46,7 +46,7 @@ function Home() {
                 <div className="col">
                     {
                         loggedInUser.user.avatar ?
-                        <img src={`http://localhost:8080/${loggedInUser.user.avatar}`} alt="" className="img-fluid user-img"/>
+                        <img src={`https://guarded-waters-35638.herokuapp.com/${loggedInUser.user.avatar}`} alt="" className="img-fluid user-img"/>
                         :
                         <img src={defaultImage} alt="" className="img-fluid user-img"/>
                     }

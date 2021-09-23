@@ -8,7 +8,7 @@ const VideoCard = (props) => {
     const { video, _id } = (props.data)
    
     const handleDelete = async (id) => {
-        const res = await axios.delete(`http://localhost:8080/api/video/${id}`, {
+        const res = await axios.delete(`https://guarded-waters-35638.herokuapp.com/api/video/${id}`, {
             headers: {'Authorization': `Bearer ${loggedInUser.token}`}
         })
 
@@ -19,7 +19,7 @@ const VideoCard = (props) => {
 
     return (
         <div className="pb-4 text-center d-flex align-items-center justify-content-center">
-            <video src={`http://localhost:8080/${video}`} controls className="w-25"></video>
+            <video src={`https://guarded-waters-35638.herokuapp.com/${video}`} controls className="w-25"></video>
 
             <button className="btn btn-danger ms-5" onClick={()=>handleDelete(_id)}>Delete</button>
         </div>

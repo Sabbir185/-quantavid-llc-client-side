@@ -16,7 +16,7 @@ const SignUp = () => {
             email: event.target[1].value,
             password: event.target[2].value,
         }
-        await fetch(`http://localhost:8080/api/user`, {
+        await fetch(`https://guarded-waters-35638.herokuapp.com/api/user`, {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)

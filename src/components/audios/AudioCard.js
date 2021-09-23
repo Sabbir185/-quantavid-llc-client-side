@@ -8,7 +8,7 @@ const AudioCard = (props) => {
     const { audio, _id } = (props.data)
     
     const handleDelete = async (id) => {
-        const res = await axios.delete(`http://localhost:8080/api/audio/${id}`, {
+        const res = await axios.delete(`https://guarded-waters-35638.herokuapp.com/api/audio/${id}`, {
             headers: {'Authorization': `Bearer ${loggedInUser.token}`}
         })
 
@@ -20,7 +20,7 @@ const AudioCard = (props) => {
 
     return (
         <div className="pb-4 text-center d-flex align-items-center justify-content-center">
-            <audio src={`http://localhost:8080/${audio}`} controls></audio>
+            <audio src={`https://guarded-waters-35638.herokuapp.com/${audio}`} controls></audio>
 
             <button className="btn btn-danger ms-5" onClick={()=>handleDelete(_id)}>Delete</button>
         </div>

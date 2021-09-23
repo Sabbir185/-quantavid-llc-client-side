@@ -8,7 +8,7 @@ const ImageCard = (props) => {
     const { image, _id } = (props.data)
     
     const handleDelete = async (id) => {
-        const res = await axios.delete(`http://localhost:8080/api/image/${id}`, {
+        const res = await axios.delete(`https://guarded-waters-35638.herokuapp.com/api/image/${id}`, {
             headers: {'Authorization': `Bearer ${loggedInUser.token}`}
         })
 
@@ -20,7 +20,7 @@ const ImageCard = (props) => {
 
     return (
         <div className="pb-4 text-center">
-            <img src={`http://localhost:8080/${image}`} alt="" className="img-fluid" style={{width: '100px'}}/>
+            <img src={`https://guarded-waters-35638.herokuapp.com/${image}`} alt="" className="img-fluid" style={{width: '100px'}}/>
 
             <button className="btn btn-danger ms-5" onClick={()=>handleDelete(_id)}>Delete</button>
         </div>
