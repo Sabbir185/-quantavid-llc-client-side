@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.user-img {
+    width: 150px;
+    border: 1px solid cyan;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+}
+
+.user-info {
+    border-left: 1px solid rgba(0, 139, 139, 0.616);
+}
+
+.user-dashBoard {
+    background-image: url('../stataticFiles/sgu.jpg');
+    padding: 3%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+
+.textColor1 {
+    color: purple;
+}
+.textColor2 {
+    color: #2C3E50;
+}
